@@ -1,0 +1,5 @@
+<section id="tree">
+  <figure>
+    <img src="<%= Routes.static_path(@conn, "/images/tree.svg") %>">
+  </figure>
+</section>
