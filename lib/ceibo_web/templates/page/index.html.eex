@@ -1,5 +1,7 @@
 <section id="tree">
-  <figure>
-    <img src="<%= Routes.static_path(@conn, "/images/tree.svg") %>">
-  </figure>
+  <div id="tree__container">
+    <div id="circle">
+    </div>
+    <figure><%= render "_tree-image.html" %></figure>
+  </div>
 </section>

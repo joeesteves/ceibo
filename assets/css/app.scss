@@ -1,8 +1,107 @@
 /* This file is for your main application css. */
-@import "./phoenix.css";
+:root {
+  --color: hsl(120, 60%, 40%);
+}
+
 body {
   font-family: monospace;
-  h1, h2, h3, h4{
+  background-color: #000;
+  color: var(--color);
+
+  h1,
+  h2,
+  h3,
+  h4 {
     text-align: center;
+  }
+
+  header {
+    padding: 0em;
+  }
+
+  #tree {
+    position: relative;
+    --parenthesis: 5px solid var(--color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 85vh;
+
+    @media (max-width: 768px) {
+      height: 60vh;
+    }
+
+
+    #tree__container {
+      position: relative;
+      height: 90%;
+    }
+
+    figure {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      height: 100%;
+      margin: 0px;
+    }
+
+    #circle {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
+    #circle::after,
+    #circle::before {
+      background-color: transparent;
+      position: absolute;
+      width: 60%;
+      height: 100%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      border-radius: 50%;
+    }
+
+    #circle::after {
+      content: '';
+
+      right: 50%;
+      margin-right: -30%;
+
+      @media (max-width: 768px) {
+        margin-right: -50%;
+      }
+
+      border-right: var(--parenthesis);
+    }
+
+    #circle::before {
+      content: '';
+
+      left: 50%;
+      margin-left: -30%;
+
+      @media (max-width: 768px) {
+        margin-left: -50%;
+      }
+
+      border-left: var(--parenthesis);
+    }
+
+    #tree-image {
+      position: absolute;
+      fill: var(--color);
+
+      height: 70%;
+      width: auto;
+    }
   }
 }
