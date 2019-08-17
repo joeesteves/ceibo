@@ -1,4 +1,5 @@
 /* This file is for your main application css. */
+
 :root {
   --color: hsl(120, 60%, 40%);
 }
@@ -22,17 +23,14 @@ body {
   #tree {
     position: relative;
     --parenthesis: 5px solid var(--color);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     height: 85vh;
 
     @media (max-width: 768px) {
       height: 60vh;
     }
-
 
     #tree__container {
       position: relative;
@@ -45,13 +43,34 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
       height: 100%;
       margin: 0px;
     }
 
-    #circle {
+    .tree__links {
       position: absolute;
+      top: -30%;
+      left: 50%;
+
+      margin-left: -30%;
+      width: 60%;
+
+      fill: var(--color);
+
+      font-size: 0.3em;
+      font-family: monospace;
+      transform: scaleY(0.60);
+    }
+
+    .ccw-rotate {
+      transform: rotate(-70deg);
+      transition: cubic-bezier(0.5, 3, 0.6, 0.3) 3s;
+    }
+
+    #circle {
+      // z-index: 100;
+      position: absolute;
+      top: 0px;
       height: 100%;
       width: 100%;
     }
@@ -72,7 +91,6 @@ body {
 
     #circle::after {
       content: '';
-
       right: 50%;
       margin-right: -30%;
 
@@ -85,7 +103,6 @@ body {
 
     #circle::before {
       content: '';
-
       left: 50%;
       margin-left: -30%;
 
@@ -99,7 +116,6 @@ body {
     #tree-image {
       position: absolute;
       fill: var(--color);
-
       height: 70%;
       width: auto;
     }

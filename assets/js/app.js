@@ -15,3 +15,10 @@ import "phoenix_html"
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
+
+document.querySelector('svg text').addEventListener('click', (textElm) => {
+  textElm.target.closest('svg').classList.add("ccw-rotate")
+  setTimeout(() => {
+    textElm.target.closest('svg').classList.remove("ccw-rotate")
+  }, 5000);
+})
