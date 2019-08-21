@@ -6,10 +6,23 @@
     <div id="tree__contact-link" class="tree__links">
       <svg viewBox="0 0 100 100">
         <path id="curve" d="M0,50 a1,1 0 0,0 100,0" fill="transparent" />
-          <text>
-            <textPath xlink:href="#curve">Contacto</textPath>
-          </text>
       </svg>
     </div>
   </div>
+</section>
+<section id="links">
+  <ul class="list flex justify-between w-100 ph5">
+    <li>
+      <a href="#">Projects<span class="icon-desktop"></span></a>
+    </li>
+    <li>
+      <a href="#">Stack<span class="icon-database"></span></a>
+    </li>
+    <li>
+      <a href="#">Work with us<span class="icon-thumbs-up"></span></a>
+    </li>
+    <li>
+      <a href="#">About me<span class="icon-user"></span></a>
+    </li>
+  </ul>
 </section>
