@@ -18,6 +18,12 @@ defmodule CeiboWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/proyects", ProyectLive.Index, :index
+    live "/proyects/new", ProyectLive.Index, :new
+    live "/proyects/:id/edit", ProyectLive.Index, :edit
+
+    live "/proyects/:id", ProyectLive.Show, :show
+    live "/proyects/:id/show/edit", ProyectLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.

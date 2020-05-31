@@ -1,0 +1,27 @@
+<h1>Show Proyect</h1>
+
+<%= if @live_action in [:edit] do %>
+  <%= live_modal @socket, CeiboWeb.ProyectLive.FormComponent,
+    id: @proyect.id,
+    title: @page_title,
+    action: @live_action,
+    proyect: @proyect,
+    return_to: Routes.proyect_show_path(@socket, :show, @proyect) %>
+<% end %>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @proyect.title %>
+  </li>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @proyect.body %>
+  </li>
+
+</ul>
+
+<span><%= live_patch "Edit", to: Routes.proyect_show_path(@socket, :edit, @proyect), class: "button" %></span>
+<span><%= live_redirect "Back", to: Routes.proyect_index_path(@socket, :index) %></span>
