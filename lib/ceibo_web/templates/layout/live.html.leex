@@ -1,3 +1,12 @@
+<header>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <%= link "Ceibo ()", to: Routes.page_path(@socket, :index), class: "navbar-brand" %>
+    <!-- Nav links -->
+
+
+    <%= live_patch "Proyectos", to: Routes.proyect_index_path(@socket, :index) %>
+  </nav>
+</header>
 <main role="main" class="container">
   <p class="alert alert-info" role="alert"
     phx-click="lv:clear-flash"
